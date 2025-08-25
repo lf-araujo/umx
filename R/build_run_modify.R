@@ -4819,9 +4819,9 @@ umxPath <- function(from = NULL, to = NULL, with = NULL, var = NULL, cov = NULL,
 			labels = paste0("data.", labels)
 		}
 		a = umxPath(var = defn, fixedAt = 0)
-		b = umxPath(means = defn, free = FALSE, labels = labels)
-		# var a var@1 mean@0
-		return(list(a, b))
+		
+		# var a var@0
+		return(a)
 	}
 
 	if(!is.null(Cholesky)){
